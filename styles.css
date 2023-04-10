@@ -1,0 +1,251 @@
+.weather{
+    display: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: #07051a;
+}
+
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+input{
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover,
+form:valid{
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input,
+form:valid input{
+    display: block;
+}
+
+form:hover .fa,
+form:valid .fa{
+    background: #07051a;
+    color: white;
+}
+
+
+a {
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center; 
+  width: 100%;
+}
+
+form:valid a {
+  display: block;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+*{
+    padding: 0;
+    margin: 0;
+    color: #FFF;
+}
+
+body{
+    background-color: #ededed;
+}
+
+.container1{
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    margin: 150px auto;
+    height: 90px;
+    width: 300px;
+    background-color: #f4d5e6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+
+/*  BACKGROUND  */
+
+.Circle1{
+    z-index: 100;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: -20px;
+    top: -30px;
+    border-radius: 50%;
+    background-color: rgba(253,184,19,1);
+    animation: enlarge;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.Circle2{
+    z-index: 80;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    right: -50px;
+    top: -70px;
+    border-radius: 50%;
+    background-color: rgba(246,140,31,0.7);
+    
+    animation: enlarge;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.Circle3{
+    z-index: 50;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    right: -50px;
+    top: -100px;
+    border-radius: 50%;
+    background-color: rgba(241,125,45,0.7);
+    
+    animation: enlarge;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/*  CONTENT  */
+
+.sun{
+    z-index: 1000;
+    font-size: 15px !important;
+}
+
+.temp_high{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    left: 20px;  
+    top: 10px;
+}
+
+.temp{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    left: 20px;
+    bottom: 5px;
+}
+
+#F{
+    z-index: 1000;
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+.temp_low{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    right: 20px;
+    top: 10px;
+}
+
+.locationIcon{
+    z-index: 1000;
+    font-size: 10px !important;
+}
+
+.city{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    right: 20px;
+    bottom: 15px;
+}
+
+@keyframes enlarge{
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
